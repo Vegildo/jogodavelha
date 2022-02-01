@@ -1,7 +1,5 @@
 import React from 'react';
 import './styles.css';
-
-//import Bloco from './Bloco';
 import Display from './Display';
 
 
