@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
 
-const Display = () => {
+const Display = ( {jogadorAtual} ) => {
     return (
         <div className="input">
-            Display
+            Jogador atual: {jogadorAtual}
         </div>
     )
 }
