@@ -3,12 +3,16 @@ import "./styles.css";
 
 const Bloco = () => {
     return (
-        <div
-        className="bloco-wrapper bloco"
-        >
-            
+        <div className='bloco-wrapper bloco'>
+            {bloco.map((item, index) => <div key={index} className={`celula ${item}`}>{item}</div>)}
         </div>
     );
 }
 
 export default Bloco;
+
+/* <div
+    className="bloco-wrapper bloco"
+>
+            
+</div> */

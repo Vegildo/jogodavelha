@@ -17,19 +17,20 @@ h1 {
     border: 10px outset darkslategrey;
 }
 
-.linha {
-    display: flex;
-}
-
 .bloco-wrapper {
     background-color: #e0e1e6;
     color: #888;
 }
 
+.input {    
+    color: darkslategrey;
+}
+
 .bloco {
-    height: 100px;
-    width: 100px;
+    height: 160px;
+    width: 160px;
     margin: 10px;
-    background-color: cadetblue;
+    background-color: rgba(81, 95, 95, 0.726);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.356);
 }
 
