@@ -8,10 +8,20 @@ class App extends React.Component {
     arrayVazio = Array(9).fill("")    
     state = { bloco: this.arrayVazio, jogadorAtual: "O" }
 
-    clickBloco = ({ index }) => {       
-        this.setState( { bloco: this.state.bloco.map((item, itemIndex) => (itemIndex === index ? this.state.jogadorAtual : item)) } )
+    clickBloco = ( { index } ) => {        
+
+        var newbloco = this.state.bloco.map((item, itemIndex) => {
+            if (itemIndex === index) {
+                return "X";
+            } else {
+                return item
+            }
+        } )
+
+        console.log(newbloco)     
+        this.setState( { bloco: newbloco  } ) 
         
-        
+        this.setState( { jogadorAtual: this.state.jogadorAtual === "O" ? "X" : "O"} )
        
     }
 
