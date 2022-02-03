@@ -8,20 +8,17 @@ class App extends React.Component {
     arrayVazio = Array(9).fill("")    
     state = { bloco: this.arrayVazio, jogadorAtual: "O" }
 
-    clickBloco = ( { index } ) => {        
+    clickBloco = ( index ) => {        
 
         var newbloco = this.state.bloco.map((item, itemIndex) => {
             if (itemIndex === index) {
-                return "X";
+                return this.state.jogadorAtual;
             } else {
                 return item
             }
         } )
-
-        console.log(newbloco)     
-        this.setState( { bloco: newbloco  } ) 
         
-        this.setState( { jogadorAtual: this.state.jogadorAtual === "O" ? "X" : "O"} )
+        this.setState( { bloco: newbloco, jogadorAtual: this.state.jogadorAtual === "O" ? "X" : "O" } )      
        
     }
 
@@ -34,6 +31,7 @@ class App extends React.Component {
     }
 
     render() {
+        console.log(this.state.bloco)
         return (
             <div className='App'>
                 <h1>Jogo da Velha do VV</h1>
