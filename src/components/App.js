@@ -10,7 +10,9 @@ class App extends React.Component {
 
     clickBloco = ({ index }) => {       
         this.setState( { bloco: this.state.bloco.map((item, itemIndex) => (itemIndex === index ? this.state.jogadorAtual : item)) } )
-
+        
+        
+       
     }
 
     renderBloco = () => {
